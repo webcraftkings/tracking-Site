@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel-logistics Homepage</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<style>
+    /* --- LOGO STYLING --- */
+    /* ExcelSecure Logo Image Styling */
+    .logo-box img {
+        height: 50px;
+        /* Adjust height as needed */
+        width: auto;
+        display: block;
+    }
+
+    /* If your logo container is too small, you may need to adjust the header padding too */
+    .logo-box {
+        background-color: var(--dark-bg);
+        color: var(--text-light);
+        /* Increase vertical padding if the larger logo makes the header look cramped */
+        padding: 18px 0;
+        /* Adjusted from 15px 0 to accommodate the larger logo */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* ExcelSecure Text Styling */
+    .logo-text {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #ffffff;
+        /* Excel-Secure purple */
+        font-family: 'Arial Black', Arial, sans-serif;
+        /* Use a bold, strong font */
+        position: relative;
+        letter-spacing: 2px;
+        /* Space out letters for a modern look */
+        align-items: center;
+    }
+
+    /* If you want the subtle arrow effect (highly dependent on font):
+   you would use a custom font or manually adjust letter-spacing 
+   on the 'E' or 'x' and use relative positioning. 
+   Achieving the perfect hidden arrow in pure CSS is extremely difficult, 
+   so the visual appearance and color is the best goal here.
+*/
+
+
+    /* --- REST OF CSS (FROM PREVIOUS RESPONSE) --- */
+
+    /* Basic Reset & Body Styling */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Header Styling */
+    .main-header {
+        background-color: #FF6200;
+        /* FedEx purple */
+        color: #fff;
+        padding: 0.1px 0;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main-nav ul {
+        list-style: none;
+        display: flex;
+    }
+
+    .main-nav ul li {
+        margin-left: 30px;
+        position: relative;
+    }
+
+    .main-nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.9em;
+        padding: 5px 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .main-nav ul li a:hover {
+        opacity: 0.8;
+    }
+
+    .user-actions {
+        display: flex;
+        align-items: center;
+    }
+
+    .user-actions .sign-in {
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.9em;
+        margin-right: 20px;
+        border-right: 1px solid rgba(255, 255, 255, 0.4);
+        padding-right: 20px;
+    }
+
+    .user-actions .search-icon {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2em;
+    }
+
+    /* --- FLAT-RATE PROMO SECTION STYLING --- */
+
+    .flat-rate-promo-section {
+        background-color: #fff;
+        /* White background for the entire section */
+        padding: 0;
+        /* Content wrapper handles padding */
+        position: relative;
+        overflow: hidden;
+        /* Important for containing angled dividers if used */
+    }
+
+    .flat-rate-content-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Vertically center content */
+        max-width: 1400px;
+        /* Max width for the content itself */
+        margin: 0 auto;
+        min-height: 500px;
+        /* Minimum height for the banner */
+        position: relative;
+    }
+
+    /* Left Text Column */
+    .flat-rate-text-column {
+        flex: 1;
+        /* Takes up available space */
+        padding: 60px 40px 60px 80px;
+        /* Adjust padding as needed */
+        text-align: left;
+        color: #333;
+        z-index: 2;
+        /* Ensure text is above any background effects */
+    }
+
+    .flat-rate-text-column h2 {
+        font-size: 3em;
+        font-weight: 300;
+        /* Lighter font weight as in the image */
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }
+
+    .flat-rate-text-column p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+
+    .flat-rate-text-column .btn-primary {
+        /* Reuses existing .btn-primary style */
+        display: inline-block;
+        /* Make it an inline block to size to content */
+        padding: 15px 40px;
+        font-size: 1.1em;
+        margin-bottom: 20px;
+    }
+
+    .sub-links {
+        font-size: 0.9em;
+        color: #666;
+    }
+
+    .sub-links a {
+        color: #666;
+        text-decoration: underline;
+        transition: color 0.3s ease;
+    }
+
+    .sub-links a:hover {
+        color: #4D148C;
+        /* Purple on hover */
+    }
+
+    .link-separator {
+        margin: 0 8px;
+        color: #ccc;
+    }
+
+
+    /* Right Image Column */
+    .flat-rate-image-column {
+        flex: 1;
+        /* Takes up available space */
+        background-color: #f8f8f8;
+        /* Light gray background to blend with image if needed */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .flat-rate-image {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* --- Responsive Adjustments --- */
+    @media (max-width: 992px) {
+        .flat-rate-content-wrapper {
+            flex-direction: column;
+            /* Stack columns vertically */
+            min-height: auto;
+        }
+
+        .flat-rate-text-column {
+            padding: 50px 40px;
+            text-align: center;
+            /* Center text on mobile */
+        }
+
+        .flat-rate-text-column h2 {
+            font-size: 2.5em;
+        }
+
+        .flat-rate-image-column {
+            min-height: 300px;
+            /* Give image column a defined height on mobile */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .flat-rate-text-column h2 {
+            font-size: 2em;
+        }
+
+        .flat-rate-text-column p {
+            font-size: 1em;
+        }
+
+        .flat-rate-text-column .btn-primary {
+            padding: 12px 30px;
+            font-size: 1em;
+        }
+    }
+
+    /* --- BLUE PROMOTIONAL BANNER SECTION --- */
+
+    .blue-promo-banner {
+        /* Deep blue background color */
+        background-color: #004080;
+        /* Darker, corporate blue */
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .banner-content {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .banner-main-text {
+        font-size: 1.5em;
+        font-weight: 300;
+        line-height: 1.5;
+        color: white;
+        /* White text for contrast */
+        margin-bottom: 20px;
+    }
+
+    .banner-cta-link {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: white;
+        /* White text for the link */
+        text-decoration: underline;
+        display: inline-block;
+        padding-top: 5px;
+        transition: color 0.2s ease;
+    }
+
+    .banner-cta-link:hover {
+        color: #f0f0f0;
+        /* Slight color change on hover */
+        text-decoration: none;
+    }
+
+    /* --- Responsiveness --- */
+    @media (max-width: 768px) {
+        .blue-promo-banner {
+            padding: 30px 20px;
+        }
+
+        .banner-main-text {
+            font-size: 1.2em;
+        }
+
+        .banner-cta-link {
+            font-size: 1em;
+        }
+    }
+
+    /* --- FLAT-RATE EXPLANATION SECTION STYLING --- */
+
+    .flat-rate-explanation-section {
+        padding: 80px 0;
+        background-color: #fcfcfc;
+        /* Light background */
+        text-align: center;
+    }
+
+    .flat-rate-explanation-section .section-heading-lg {
+        /* Reusing large heading style */
+        margin-bottom: 25px;
+    }
+
+    .flat-rate-description {
+        max-width: 900px;
+        margin: 0 auto 60px;
+        font-size: 1.1em;
+        line-height: 1.6;
+        color: #555;
+    }
+
+    .flat-rate-description a {
+        color: #4D148C;
+        /* Purple link color */
+        text-decoration: underline;
+    }
+
+    .flat-rate-description a:hover {
+        color: #FF6200;
+        /* Orange hover color */
+    }
+
+    /* --- Benefits Grid --- */
+    .flat-rate-benefits-grid {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        max-width: 1000px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        /* Allow items to wrap */
+    }
+
+    .benefit-item {
+        flex: 1;
+        /* Allows items to grow/shrink */
+        min-width: 280px;
+        /* Minimum width before wrapping */
+        max-width: 320px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .benefit-icon {
+        height: 80px;
+        /* Consistent height for icons */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    .benefit-icon img {
+        width: 60px;
+        /* Size of the icons */
+        height: 60px;
+        object-fit: contain;
+        /* Since the image has purple, we don't need a CSS gradient for the icon itself. */
+    }
+
+    .benefit-text {
+        font-size: 1em;
+        line-height: 1.6;
+        color: #555;
+    }
+
+    .benefit-text a {
+        color: #4D148C;
+        /* Purple link color */
+        text-decoration: underline;
+    }
+
+    .benefit-text a:hover {
+        color: #FF6200;
+        /* Orange hover color */
+    }
+
+    /* --- Responsiveness --- */
+    @media (max-width: 768px) {
+        .flat-rate-benefits-grid {
+            flex-direction: column;
+            /* Stack benefits vertically */
+            gap: 30px;
+        }
+
+        .benefit-item {
+            max-width: 80%;
+            /* Wider items on mobile */
+            margin: 0 auto;
+            /* Center items */
+        }
+    }
+
+    /* --- FLAT-RATE PRICING TABLE SECTION STYLING --- */
+
+    .flat-rate-pricing-section {
+        padding: 80px 0;
+        background-color: #fff;
+        /* White background */
+        text-align: center;
+    }
+
+    .flat-rate-pricing-section .section-heading-lg {
+        /* Reusing large heading style */
+        margin-bottom: 25px;
+    }
+
+    .table-intro-text {
+        max-width: 900px;
+        margin: 0 auto 40px;
+        font-size: 1.1em;
+        line-height: 1.6;
+        color: #555;
+    }
+
+    .table-intro-text a {
+        color: #4D148C;
+        /* Purple link color */
+        text-decoration: underline;
+    }
+
+    .table-intro-text a:hover {
+        color: #FF6200;
+        /* Orange hover color */
+    }
+
+    /* --- Table Structure and Layout --- */
+    .pricing-table-wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        overflow-x: auto;
+        /* Allows table to scroll horizontally on small screens */
+    }
+
+    .packaging-pricing-table {
+        width: 100%;
+        border-collapse: collapse;
+        /* Removes double borders */
+        background-color: #fff;
+        min-width: 700px;
+        /* Ensure table is wide enough for content */
+    }
+
+    /* Table Header */
+    .packaging-pricing-table th {
+        background-color: #f7f7f7;
+        color: #333;
+        font-weight: bold;
+        padding: 15px 10px;
+        border-bottom: 2px solid #ddd;
+        text-align: left;
+        font-size: 1em;
+    }
+
+    .packaging-pricing-table th:last-child {
+        text-align: center;
+        /* Center the price column header */
+        width: 15%;
+    }
+
+    /* Table Body Rows and Cells */
+    .packaging-pricing-table td {
+        padding: 20px 10px;
+        border-bottom: 1px solid #eee;
+        vertical-align: top;
+        font-size: 0.95em;
+        color: #555;
+    }
+
+    .packaging-pricing-table tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    /* Packaging Column (Image and Name) */
+    .package-name-cell {
+        display: table-cell;
+        width: 20%;
+        text-align: center;
+        line-height: 1.4;
+        font-weight: 500;
+    }
+
+    .package-name-cell p {
+        margin: 5px 0 0 0;
+        color: #4D148C;
+        /* Purple name */
+    }
+
+    .package-image {
+        max-width: 80px;
+        height: auto;
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    /* Dimensions Column */
+    .dimensions-cell {
+        width: 50%;
+    }
+
+    /* Rate Column (Price) */
+    .rate-cell {
+        width: 15%;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+    }
+
+    /* --- FOOTER STYLING --- */
+
+.main-footer {
+    background-color: #f5f5fa; /* Very light purple/off-white background */
+    padding: 30px 0 20px;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distributes columns across the footer */
+    gap: 30px;
+    padding-bottom: 20px;
+}
+
+.footer-column-group {
+    display: flex;
+    gap: 60px; /* Space between the main groups of columns */
+}
+
+.footer-column {
+    /* For column 1 and 2, which are tightly grouped */
+    min-width: 150px; 
+}
+
+.footer-column h4.column-title {
+    font-size: 0.85em;
+    font-weight: bold;
+    color: #4D148C; /* FedEx Purple */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #333; /* Dark text for links */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #4D148C; /* Purple on hover */
+}
+
+/* --- LANGUAGE SELECTOR STYLING --- */
+.language-selector {
+    min-width: 200px;
+}
+
+.language-display {
+    display: flex;
+    align-items: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.language-display .globe-icon {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    /* Creating the blue border visible in the image */
+    border: 2px solid #a3c4f7; 
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.language-dropdown {
+    width: 100%;
+    padding: 10px 30px 10px 10px; /* Extra padding on the right for the arrow */
+    appearance: none; /* Removes default browser dropdown arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1em;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Custom dropdown arrow (recreating the look without a true custom element) */
+.select-wrapper::after {
+    content: '⌵'; /* Custom down arrow character or use an SVG/image */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #4D148C; /* Purple arrow */
+    pointer-events: none; /* Allows clicks to go through to the select element */
+}
+
+/* --- LIVE CHAT WIDGET STYLING --- */
+
+/* Container for positioning (Fixed to screen bottom-right) */
+.chat-widget-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999; /* Ensure it's on top of everything */
+}
+
+/* 1. Chat Toggle Button (The Bubble Icon) */
+.chat-toggle-button {
+    background-color: #FF6200; /* FedEx Orange */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1.8em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.chat-toggle-button:hover {
+    background-color: #e05700;
+    transform: scale(1.05);
+}
+
+/* 2. Chat Window (The actual dialogue box) */
+.chat-window {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 320px;
+    height: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    
+    /* Position above the toggle button */
+    position: absolute;
+    bottom: 80px; /* Space above the toggle button */
+    right: 0;
+    
+    /* Hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.95);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 3. Toggled State: Make it visible */
+.chat-window.open {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+/* Chat Header */
+.chat-header {
+    background-color: #4D148C; /* FedEx Purple */
+    color: white;
+    padding: 15px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h4 {
+    margin: 0;
+    font-weight: 500;
+}
+
+.chat-close-icon {
+    font-size: 1em;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.chat-close-icon:hover {
+    opacity: 1;
+}
+
+/* Chat Body (Message area) */
+.chat-body {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+/* Chat Footer (Input area) */
+.chat-footer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.chat-footer input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+    outline: none;
+}
+
+.chat-footer button {
+    background-color: #FF6200;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: not-allowed; /* Disabled until actual chat integration */
+}
+
+/* --- SEPARATOR & COPYRIGHT --- */
+.footer-separator {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 10px auto 20px;
+    width: 100%;
+}
+
+.copyright-section {
+    text-align: left;
+    color: #999;
+    font-size: 0.8em;
+}
+
+/* --- MENU TOGGLE BUTTON (Hidden on Desktop) --- */
+.menu-toggle {
+    display: none; /* Hide button by default on large screens */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 0 10px;
+    z-index: 10; /* Ensure it is above other elements */
+}
+
+/* --- MOBILE NAVIGATION STYLING --- */
+@media (max-width: 768px) {
+    /* Header container Layout */
+    .header-content {
+        flex-direction: row; /* Keep logo and menu button in a row */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* 1. Show the Menu Toggle Button */
+    .menu-toggle {
+        display: block; /* Show button on small screens */
+        order: 2; /* Move it to a suitable position */
+    }
+
+    .main-nav ul{
+        position:absolute;
+        right:50px;
+        top:15px;
+    }
+    /* 2. Collapse the Navigation Links */
+    .main-nav ul {
+        /* Default state: hidden and off-screen */
+        display: block; /* Change from flex to block for vertical stacking */
+        position: absolute;
+        top: 100%; /* Position below the header */
+        left: 0;
+        width: 100%;
+        background-color: #4D148C; /* A dark color for the dropdown background (FedEx Purple) */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        
+        /* Start off-screen (adjust depending on header width) */
+        transform: translateY(-200%); 
+        transition: transform 0.3s ease-in-out;
+        
+        /* Ensure it covers everything */
+        z-index: 5; 
+        padding-bottom: 20px;
+    }
+
+    /* 3. Dropdown Menu Links */
+    .main-nav ul li {
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .main-nav ul li a {
+        display: block;
+        padding: 15px 0;
+        color: white;
+        text-decoration: none;
+        font-size: 1.1em;
+    }
+
+    /* 4. Toggled State: Bring the menu into view */
+    .main-nav ul.open {
+        transform: translateY(0);
+    }
+    
+    /* Re-organize header content for mobile if necessary (from previous steps) */
+    .header-content {
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+/* --- RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-column-group {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-column {
+        min-width: unset;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .footer-column ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .footer-column ul li {
+        margin: 5px 15px;
+    }
+
+    .language-selector {
+        min-width: 100%;
+        text-align: center;
+    }
+
+    .language-display {
+        justify-content: center;
+    }
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .feature-block {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+    }
+
+    .block-image-column {
+        width: 100%; /* Image takes full width */
+        height: auto;
+        margin-bottom: 15px;
+    }
+    
+    .feature-separator {
+        width: 90%;
+    }
+}
+
+/* --- RESPONSIVENESS FOR THE NEW SECTION --- */
+@media (max-width: 900px) {
+    .support-content {
+        grid-template-columns: 1fr; /* Stack columns vertically */
+        gap: 30px;
+    }
+    
+    .support-text-column h2 {
+        font-size: 2em;
+    }
+
+    .support-image-column {
+        /* On smaller screens, the image can stay at the bottom, or you can move it to the top */
+        order: -1; /* Example: Move image to the top on smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
+/* --- RESPONSIVENESS FOR THE NEW SECTION --- */
+@media (max-width: 900px) {
+    .feature-card-grid {
+        flex-direction: column; /* Stack the cards vertically on tablets/mobiles */
+    }
+
+    .feature-card {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+}
+
+/* --- RESPONSIVENESS FOR THE NEW SECTION --- */
+@media (max-width: 900px) {
+
+    /* Stack the two main columns vertically on smaller screens */
+    .info-content {
+        grid-template-columns: 1fr;
+    }
+
+    .info-text-column {
+        padding-right: 0;
+    }
+
+    /* Stack the feature boxes vertically on very small screens */
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-image-column {
+        order: -1;
+        /* Move image to the top on mobile for better visibility */
+        margin-bottom: 30px;
+    }
+}
+
+/* Responsive adjustments (basic example) */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .main-nav ul li {
+        margin: 5px 15px;
+    }
+
+    .user-actions {
+        margin-top: 10px;
+    }
+
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .interactive-boxes {
+        flex-direction: column;
+    }
+
+    .interactive-boxes .box {
+        margin: 10px 0;
+        min-width: unset;
+        width: 80%;
+    }
+
+    .tracking-input-area {
+        flex-direction: column;
+    }
+
+    .tracking-input,
+    .track-button {
+        border-radius: 5px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 700px) {
+
+        /* Force table to scroll horizontally instead of stacking poorly */
+        .pricing-table-wrapper {
+            border-left: none;
+            border-right: none;
+            border-radius: 0;
+        }
+    }
+</style>
+
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo-box">
+                <a href="index.html">
+                    <img src="../assets/images/logo.png" alt="Excel-logistics">
+                </a>
+                <!-- <div class="logo-text">E-Secure</div> -->
+            </div>
+
+            <nav class="main-nav">
+                <ul id="main-nav-list">
+                    <li><a href="shipping.html">Shipping</a></li>
+                    <li><a href="tracking.html">Tracking</a></li>
+                    <li><a href="location.html">Locations</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="flat-rate-promo-section">
+        <div class="flat-rate-content-wrapper">
+            <div class="flat-rate-text-column">
+                <h2>Flat-rate shipping<br>with Excel-Secure One Rate<sup>®</sup></h2>
+                <p>Two-day shipping, one flat rate.</p>
+                <a href="shipping.html" class="btn btn-primary">SHIP ONLINE</a>
+                <div class="sub-links">
+                    <a href="#">Get a rate</a>
+                    <span class="link-separator">|</span>
+                    <a href="location.html">Find a location to ship</a>
+                </div>
+            </div>
+            <div class="flat-rate-image-column">
+                <img src="../assets/images/flat-rate-box-explosion.png" alt="Box with various items shipping out"
+                    class="flat-rate-image">
+            </div>
+        </div>
+    </section>
+
+    <section class="blue-promo-banner">
+        <div class="container banner-content">
+            <p class="banner-main-text">
+                Excel-Secure can ship your packages for less than the Post Office. Two-day retail shipping, one flat
+                rate. Excel-Secure One Rate.
+            </p>
+            <a href="#" class="banner-cta-link">
+                See Excel-Secure One Rate two-day pricing.
+            </a>
+        </div>
+    </section>
+
+    <section class="flat-rate-explanation-section">
+        <div class="container">
+
+            <h2 class="section-heading-lg">What is flat rate shipping?</h2>
+
+            <p class="flat-rate-description">
+                Flat-rate shipping offers simplicity and predictability. Anyone can use Excel-Secure One Rate. It lets
+                you ship packages anywhere in the U.S. for a fixed price. This means you can ship heavier items without
+                paying more. <a href="#">Learn how to ship with Excel-Secure One Rate</a>—online or in-store.
+            </p>
+
+            <div class="flat-rate-benefits-grid">
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <img src="../assets/images/icon-calculator-box.png" alt="Calculator and Box Icon">
+                    </div>
+                    <p class="benefit-text">Know your rate ahead of time—no guessing games or surprise costs.</p>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <img src="../assets/images/icon-person-delivery.png" alt="Person with Package Icon">
+                    </div>
+                    <p class="benefit-text">You get dependable delivery and up to $100 in declared value at no extra
+                        cost.<sup>2</sup></p>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <img src="../assets/images/icon-desktop-discount.png" alt="Desktop with Discount Icon">
+                    </div>
+                    <p class="benefit-text">If you <a href="#">open a free business account</a>, you may be eligible for
+                        extra <a href="#">shipping discounts</a>.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="flat-rate-pricing-section">
+        <div class="container">
+
+            <h2 class="section-heading-lg">Choose your free packaging to get started</h2>
+
+            <p class="table-intro-text">
+                You need to use packaging that's eligible for Excel-Secure One Rate. Great news: You can pick from a
+                variety of boxes, envelopes, and more. Get yours in-store or <a href="#">order online</a>. Here are the
+                dimensions and rates for each packaging type.
+            </p>
+
+            <div class="pricing-table-wrapper">
+                <table class="packaging-pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Packaging</th>
+                            <th>Dimensions</th>
+                            <th>Excel-Secure 2Day<sup>®</sup> flat rates**</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="package-name-cell">
+                                <img src="../assets/images/excel-secure-pak.png" alt="Excel-Secure Pak" class="package-image">
+                                <p>Excel-Secure<sup>®</sup> Pak*</p>
+                            </td>
+                            <td class="dimensions-cell">
+                                9-1/2" x 12-1/2"<br>
+                                Reusable Envelope: 9-1/2" x 15-1/2"<br>
+                                Padded Envelope: 9-3/4" x 11-1/2"
+                            </td>
+                            <td class="rate-cell">$10.95</td>
+                        </tr>
+
+                        <tr>
+                            <td class="package-name-cell">
+                                <img src="../assets/images/excel-secure-envelope.png" alt="Excel-Secure Pak" class="package-image">
+                                <p>Excel-Secure<sup>®</sup> Pak*</p>
+                            </td>
+                            <td class="dimensions-cell">
+                                10-1/4" x 12-3/4", 12" x 15-1/2"<br>
+                                Padded: 11-3/4" x 14-3/4"<br>
+                                Reusable Sturdy Pak: 10" x 14-1/2"
+                            </td>
+                            <td class="rate-cell">$13.75</td>
+                        </tr>
+
+                        <tr>
+                            <td class="package-name-cell">
+                                <img src="../assets/images/excel-secure-small-box.png" alt="Excel-Secure Small Box"
+                                    class="package-image">
+                                <p>Excel-Secure<sup>®</sup> Small Box</p>
+                            </td>
+                            <td class="dimensions-cell">
+                                10-7/8" x 1-1/2" x 12-3/8"<br>
+                                8-3/4" x 2-5/8" x 11-1/4"
+                            </td>
+                            <td class="rate-cell">$16.75</td>
+                        </tr>
+
+                        <tr>
+                            <td class="package-name-cell">
+                                <img src="../assets/images/excel-secure-xl-box.png" alt="Excel-Secure Extra Large Box"
+                                    class="package-image">
+                                <p>Excel-Secure<sup>®</sup> Extra Large Box</p>
+                            </td>
+                            <td class="dimensions-cell">
+                                11-7/8" x 10-3/4" x 11"<br>
+                                15-3/4" x 14-1/8" x 6"
+                            </td>
+                            <td class="rate-cell">$37.75</td>
+                        </tr>
+
+                        <tr>
+                            <td class="package-name-cell">
+                                <img src="../assets/images/excel-secure-tube.png" alt="Excel-Secure Tube" class="package-image">
+                                <p>Excel-Secure<sup>®</sup> Tube</p>
+                            </td>
+                            <td class="dimensions-cell">
+                                6" x 6" x 38"
+                            </td>
+                            <td class="rate-cell">$37.75</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+
+            <div class="footer-column-group">
+
+                <div class="footer-column our-company">
+                    <h4 class="column-title">OUR COMPANY</h4>
+                    <ul>
+                        <li><a href="about.html">About Excel logistics</a></li>
+                        <li><a href="portfolio.html">Our Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column our-company">
+                    <ul>
+                        <li><a href="blog.html">Excel logistics Blog</a></li>
+                        <li><a href="corporate.html">Corporate Responsibility</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- <div class="footer-column more-from-excel-secure">
+                    <h4 class="column-title">MORE FROM EXCEL LOGISTICS</h4>
+                    <ul>
+                        <li><a href="#">Excel logistics Compatible</a></li>
+                        <li><a href="#">Excel logistics Developer Portal</a></li>
+                        <li><a href="#">Excel logistics Logistics</a></li>
+                        <li><a href="#">ShopRunner</a></li>
+                    </ul>
+                </div> -->
+
+            </div>
+
+            <div class="chat-widget-container">
+                <button class="chat-toggle-button" id="chatToggleButton" aria-expanded="false"
+                    aria-controls="chat-window">
+                    💬
+                </button>
+
+                <div class="chat-window" id="chat-window" aria-hidden="true">
+                    <div class="chat-header">
+                        <h4>Live Support</h4>
+                        <span class="chat-close-icon" onclick="closeChat()">✖</span>
+                    </div>
+                    <div class="chat-body">
+                        <p>Welcome to Excel logistics Support! How can we help you today?</p>
+                    </div>
+                    <div class="chat-footer">
+                        <input type="text" placeholder="Type your message...">
+                        <button>Send</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-column language-selector">
+                <h4 class="column-title">LANGUAGE</h4>
+
+                <div class="language-display">
+                    <span class="globe-icon">🌐</span>
+                    <span>United States</span>
+                </div>
+
+                <div class="select-wrapper">
+                    <select name="language" id="language-select" class="language-dropdown">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <hr class="footer-separator">
+
+        <div class="container copyright-section">
+            <p>&copy; 2025 Excel Secure. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+<script src="../assets/js/script.js"></script>
+
+</html>

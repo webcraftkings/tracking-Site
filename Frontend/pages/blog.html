@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel-logistics Homepage</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/blog.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo-box">
+                <a href="index.html">
+                    <img src="../assets/images/logo.png" alt="Excel-logistics">
+                </a>
+            </div>
+
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav-list">
+                &#9776; </button>
+
+            <nav class="main-nav">
+                <ul id="main-nav-list">
+                    <li><a href="shipping.html">Shipping</a></li>
+                    <li><a href="tracking.html">Tracking</a></li>
+                    <li><a href="location.html">Locations</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-banner-dark">
+        <div class="container hero-content">
+
+            <h1 class="hero-title">When it has to be there right now.</h1>
+
+            <p class="hero-subtitle">
+                Excel Logistics: The speed and convenience you expect for critical shipping.
+            </p>
+
+            <!-- <a href="#" class="btn btn-hero">SHIP NOW</a> -->
+
+        </div>
+    </section>
+
+    <header class="hero">
+        <h1>Strengthen your supply chain</h1>
+        <p>
+            Excel Logistics helps you formulate the best plan for moving your freight around the globe. Then we help you
+            execute it. By analyzing what you're shipping, where it's going, and when it needs to be there, we can help
+            you create a logistics scenario that meets your schedule and your budget.
+        </p>
+        <p>Find out about the solutions, tools, and expertise we deliver.</p>
+    </header>
+
+    <section class="services">
+        <h2>Ocean and Air Cargo Networks</h2>
+
+        <div class="card ocean">
+            <img src="../assets/images/ocean-freight.png" alt="Cargo ship with containers" />
+            <div class="card-content">
+                <h3>Ocean Freight Forwarding</h3>
+                <p>Get custom shipping solutions for importing and exporting LCL or FCL shipments.</p>
+                <a href="#" class="btn">DIVE INTO OCEAN FREIGHT</a>
+            </div>
+        </div>
+
+        <div class="card air">
+            <img src="../assets/images/air-freight.png" alt="FedEx airplane being loaded" />
+            <div class="card-content">
+                <h3>Air Freight Forwarding</h3>
+                <p>Ship to 220+ countries and territories with personal support in global markets.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <header class="hero-2">
+        <h1>Customs Brokerage & Trade Solutions</h1>
+        <p>Support for cross-border shipping and global trade compliance.</p>
+    </header>
+
+    <section class="services-2">
+        <div class="card customs-2">
+            <img src="../assets/images/customs-brokerage.png" alt="Two professionals at a desk with laptop" />
+            <div class="card-content">
+                <h2>Customs Brokerage Services</h2>
+                <p>Simplify cross-border shipping and clear customs with help from the experts.</p>
+                <!-- <a href="#" class="btn">GET CUSTOMS BROKERAGE INFORMATION</a> -->
+            </div>
+        </div>
+
+        <div class="card trade-2">
+            <img src="../assets/images/trade-solutions.png" alt="Man on phone looking at laptop" />
+            <div class="card-content">
+                <h2>Trade Solutions</h2>
+                <p>Get help navigating global trade regulations, including compliance, classification, customs, and
+                    more.</p>
+                <!-- <a href="#" class="btn">EXPLORE INTERNATIONAL TRADE SOLUTIONS</a> -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+
+            <div class="footer-column-group">
+
+                <div class="footer-column our-company">
+                    <h4 class="column-title">OUR COMPANY</h4>
+                    <ul>
+                        <li><a href="about.html">About Excel logistics</a></li>
+                        <li><a href="portfolio.html">Our Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column our-company">
+                    <ul>
+                        <li><a href="blog.html">Excel logistics Blog</a></li>
+                        <li><a href="corporate.html">Corporate Responsibility</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="chat-widget-container">
+                <button class="chat-toggle-button" id="chatToggleButton" aria-expanded="false"
+                    aria-controls="chat-window">
+                    💬
+                </button>
+
+                <div class="chat-window" id="chat-window" aria-hidden="true">
+                    <div class="chat-header">
+                        <h4>Live Support</h4>
+                        <span class="chat-close-icon" onclick="closeChat()">✖</span>
+                    </div>
+                    <div class="chat-body">
+                        <p>Welcome to Excel logistics Support! How can we help you today?</p>
+                    </div>
+                    <div class="chat-footer">
+                        <input type="text" placeholder="Type your message...">
+                        <button>Send</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-column language-selector">
+                <h4 class="column-title">LANGUAGE</h4>
+
+                <div class="language-display">
+                    <span class="globe-icon">🌐</span>
+                    <span>United States</span>
+                </div>
+
+                <div class="select-wrapper">
+                    <select name="language" id="language-select" class="language-dropdown">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <hr class="footer-separator">
+
+        <div class="container copyright-section">
+            <p>&copy; 2025 Excel Secure. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+<script src="../assets/js/script.js"></script>
+
+</html>

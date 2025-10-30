@@ -1,0 +1,2779 @@
+/* --- LOGO STYLING --- */
+/* ExcelSecure Logo Image Styling */
+.logo-box img {
+    height: 50px;
+    /* Adjust height as needed */
+    width: auto;
+    display: block;
+}
+
+/* If your logo container is too small, you may need to adjust the header padding too */
+.logo-box {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    /* Increase vertical padding if the larger logo makes the header look cramped */
+    padding: 18px 0;
+    /* Adjusted from 15px 0 to accommodate the larger logo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ExcelSecure Text Styling */
+.logo-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+    /* Excel-Secure purple */
+    font-family: 'Arial Black', Arial, sans-serif;
+    /* Use a bold, strong font */
+    position: relative;
+    letter-spacing: 2px;
+    /* Space out letters for a modern look */
+    align-items: center;
+}
+
+/* If you want the subtle arrow effect (highly dependent on font):
+   you would use a custom font or manually adjust letter-spacing 
+   on the 'E' or 'x' and use relative positioning. 
+   Achieving the perfect hidden arrow in pure CSS is extremely difficult, 
+   so the visual appearance and color is the best goal here.
+*/
+
+
+/* --- REST OF CSS (FROM PREVIOUS RESPONSE) --- */
+
+/* Basic Reset & Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+.main-header {
+    background-color: #FF6200;
+    /* FedEx purple */
+    color: #fff;
+    padding: 0.1px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 30px;
+    position: relative;
+}
+
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 5px 0;
+    transition: opacity 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    opacity: 0.8;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.user-actions .sign-in {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-right: 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+    padding-right: 20px;
+}
+
+.user-actions .search-icon {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+
+/* --- HERO SECTION STYLING --- */
+
+
+.hero-section {
+    /* Placeholder for background image. Replace 'airplane-background.jpg' */
+    background: linear-gradient(180deg, #4d5b78 0%, #303d52 100%);
+    position: relative;
+    padding: 100px 0 150px;
+    color: #9e5d35;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-section h1 {
+    font-size: 3.5em;
+    font-weight: 300;
+    line-height: 1.2;
+    /* Move up: Reduce bottom margin, or use negative top margin if needed */
+    margin-bottom: 10rem;
+    /* Reduced from 60px or similar to move it up */
+    text-shadow: 2px 2px 5px rgba(141, 141, 141, 0.5);
+    /* Stronger shadow for readability */
+}
+
+.hero-background {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    z-index: 1;
+}
+
+
+
+.interactive-boxes {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.interactive-boxes .box {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 25px 40px;
+    margin: 0 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    min-width: 150px;
+}
+
+.interactive-boxes .box:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.interactive-boxes .box.active {
+    background-color: #4D148C;
+    border-color: #4D148C;
+}
+
+.interactive-boxes .box .icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.interactive-boxes .box p {
+    font-size: 0.9em;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.tracking-input-area {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.tracking-input {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 1.1em;
+    outline: none;
+}
+
+.tracking-input::placeholder {
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 0.9em;
+    opacity: 1;
+
+}
+
+.track-button {
+    background-color: #FF6200;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.track-button:hover {
+    background-color: #e05700;
+}
+
+/* --- INFO SECTION STYLING --- */
+
+.info-section {
+    padding: 60px 0;
+    background-color: #fff;
+    /* White background */
+}
+
+.info-content {
+    /* Use CSS Grid for the two-column layout */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* Text column is twice as wide as the image column */
+    gap: 40px;
+    align-items: start;
+}
+
+.info-text-column {
+    padding-right: 40px;
+}
+
+.info-text-column h2 {
+    font-size: 2.2em;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: #333;
+    /* Dark text for readability */
+}
+
+/* Feature Grid (The four boxes of text) */
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two columns for features */
+    gap: 30px 40px;
+    margin-bottom: 30px;
+}
+
+.feature-box h3 {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.feature-box p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #666;
+}
+
+.feature-box a {
+    color: #FF6200;
+    /* FedEx orange link color */
+    text-decoration: none;
+}
+
+.feature-box a:hover {
+    text-decoration: underline;
+}
+
+/* Disclaimer text */
+.disclaimer-text {
+    font-size: 0.75em;
+    color: #999;
+    margin-top: 5px;
+}
+
+.disclaimer-text a {
+    color: #999;
+    text-decoration: underline;
+}
+
+/* Image Column */
+.info-image-column {
+    /* The image itself has a colorful background in the screenshot, 
+       so we just need to ensure it fills the space correctly. */
+    overflow: hidden;
+    /* Important to keep image contained */
+}
+
+.delivery-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Optional: Ensure the image maintains aspect ratio and covers the full height, 
+       though it may crop slightly depending on screen size. */
+    object-fit: cover;
+}
+
+/* --- START SHIPPING BUTTON STYLING (Updated to Match Bordered Look) --- */
+
+/* --- START SHIPPING BUTTON STYLING (Adjusted Padding) --- */
+
+.start-shipping-btn {
+    display: inline-block;
+    margin-top: 30px;
+
+    /* REDUCED PADDING: Changed from 15px 40px to 12px 30px */
+    padding: 12px 30px;
+
+    background-color: transparent;
+    color: #FF6200;
+    border: 2px solid #FF6200;
+
+    text-decoration: none;
+    /* Reduced font size slightly to 1.1em to fit better */
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+    position: relative;
+    z-index: 5;
+}
+
+.start-shipping-btn:hover {
+    /* Hover effect remains the same */
+    background-color: #FF6200;
+    color: #FFFFFF;
+    border-color: #FF6200;
+    cursor: pointer;
+}
+
+/* --- PACKAGES SECTION STYLING (Three-Column Feature) --- */
+
+.packages-section {
+    padding: 80px 0;
+    background-color: #f7f7f7;
+    /* Very light gray background to separate it from the white section above */
+    text-align: center;
+}
+
+.packages-section .section-title {
+    font-size: 2.5em;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+/* Feature Grid Layout */
+.feature-card-grid {
+    display: flex;
+    /* Using Flexbox for equal height columns */
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.feature-card {
+    flex: 1;
+    /* Allows each card to take an equal share of space */
+    text-align: left;
+}
+
+/* Image Styling */
+.card-image-wrapper {
+    width: 100%;
+    /* Create a fixed aspect ratio for the image container to ensure consistency */
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the image fills the container without distortion */
+    display: block;
+}
+
+/* Text Styling */
+.feature-card h3 {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+    /* Use flex property to push the link to the bottom consistently if needed */
+    flex-grow: 1;
+}
+
+/* Link Styling */
+.card-link {
+    color: #4D148C;
+    /* FedEx Purple for the link color */
+    font-size: 0.9em;
+    font-weight: bold;
+    text-decoration: none;
+    /* Remove underline */
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.card-link:hover {
+    color: #FF6200;
+    /* Change to Orange on hover */
+    text-decoration: underline;
+}
+
+/* --- SUPPORT SECTION STYLING (Two-Column with Image Right) --- */
+
+.support-section {
+    padding: 80px 0;
+    /* Consistent vertical padding */
+    background-color: #fff;
+    /* White background */
+}
+
+.support-content {
+    display: grid;
+    /* Image on right, so text column first, then image column */
+    grid-template-columns: 3fr 2fr;
+    /* Text is wider than image */
+    gap: 50px;
+    /* Space between columns */
+    align-items: center;
+    /* Vertically align items in the middle */
+}
+
+.support-text-column h2 {
+    font-size: 2.5em;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.support-text-column p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.support-link {
+    color: #4D148C;
+    /* FedEx Purple for the link color */
+    font-size: 0.9em;
+    font-weight: bold;
+    text-decoration: none;
+    /* Remove underline by default */
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.support-link:hover {
+    color: #FF6200;
+    /* Change to Orange on hover */
+    text-decoration: underline;
+}
+
+/* Image Column */
+.support-image-column {
+    overflow: hidden;
+    /* Ensures image is contained */
+    border-radius: 8px;
+    /* Optional: Slight rounded corners for the image */
+}
+
+.support-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    /* Ensures the image covers the area */
+}
+
+/* --- PEAK SEASON SECTION STYLING (Two Feature Blocks) --- */
+
+.peak-season-section {
+    padding: 80px 0;
+    background-color: #f7f7f7;
+    /* Light background to separate from white sections */
+    text-align: center;
+}
+
+.peak-season-section .section-title {
+    font-size: 2.5em;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+/* Feature Block Container */
+.feature-block {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 50px;
+    /* Space between the two feature blocks */
+    text-align: left;
+}
+
+/* The separator line */
+.feature-separator {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 50px auto;
+    width: 80%;
+}
+
+/* Image Column Styling */
+.block-image-column {
+    flex-shrink: 0;
+    /* Prevents the image column from shrinking */
+    width: 300px;
+    /* Fixed width for the image container, as seen in the screenshot */
+    height: 200px;
+    /* Fixed height for the image container */
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.block-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Text Column Styling */
+.block-text-column {
+    flex-grow: 1;
+}
+
+.block-text-column h3 {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.block-text-column p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Link Styling (Consistent with previous sections) */
+.block-link {
+    color: #4D148C;
+    /* FedEx Purple */
+    font-size: 0.9em;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.block-link:hover {
+    color: #FF6200;
+    /* FedEx Orange on hover */
+    text-decoration: underline;
+}
+
+/* --- FOOTER STYLING --- */
+
+.main-footer {
+    background-color: #f5f5fa;
+    /* Very light purple/off-white background */
+    padding: 30px 0 20px;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    /* Distributes columns across the footer */
+    gap: 30px;
+    padding-bottom: 20px;
+}
+
+.footer-column-group {
+    display: flex;
+    gap: 60px;
+    /* Space between the main groups of columns */
+}
+
+.footer-column {
+    /* For column 1 and 2, which are tightly grouped */
+    min-width: 150px;
+}
+
+.footer-column h4.column-title {
+    font-size: 0.85em;
+    font-weight: bold;
+    color: #4D148C;
+    /* FedEx Purple */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #333;
+    /* Dark text for links */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #4D148C;
+    /* Purple on hover */
+}
+
+/* --- LANGUAGE SELECTOR STYLING --- */
+.language-selector {
+    min-width: 200px;
+}
+
+.language-display {
+    display: flex;
+    align-items: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.language-display .globe-icon {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    /* Creating the blue border visible in the image */
+    border: 2px solid #a3c4f7;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.language-dropdown {
+    width: 100%;
+    padding: 10px 30px 10px 10px;
+    /* Extra padding on the right for the arrow */
+    appearance: none;
+    /* Removes default browser dropdown arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1em;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Custom dropdown arrow (recreating the look without a true custom element) */
+.select-wrapper::after {
+    content: '⌵';
+    /* Custom down arrow character or use an SVG/image */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #4D148C;
+    /* Purple arrow */
+    pointer-events: none;
+    /* Allows clicks to go through to the select element */
+}
+
+/* --- LIVE CHAT WIDGET STYLING --- */
+
+/* Container for positioning (Fixed to screen bottom-right) */
+.chat-widget-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    /* Ensure it's on top of everything */
+}
+
+/* 1. Chat Toggle Button (The Bubble Icon) */
+.chat-toggle-button {
+    background-color: #FF6200;
+    /* FedEx Orange */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1.8em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.chat-toggle-button:hover {
+    background-color: #e05700;
+    transform: scale(1.05);
+}
+
+/* 2. Chat Window (The actual dialogue box) */
+.chat-window {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 320px;
+    height: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+    /* Position above the toggle button */
+    position: absolute;
+    bottom: 80px;
+    /* Space above the toggle button */
+    right: 0;
+
+    /* Hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.95);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 3. Toggled State: Make it visible */
+.chat-window.open {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+/* Chat Header */
+.chat-header {
+    background-color: #4D148C;
+    /* FedEx Purple */
+    color: white;
+    padding: 15px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h4 {
+    margin: 0;
+    font-weight: 500;
+}
+
+.chat-close-icon {
+    font-size: 1em;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.chat-close-icon:hover {
+    opacity: 1;
+}
+
+/* Chat Body (Message area) */
+.chat-body {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+/* Chat Footer (Input area) */
+.chat-footer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.chat-footer input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+    outline: none;
+}
+
+.chat-footer button {
+    background-color: #FF6200;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: not-allowed;
+    /* Disabled until actual chat integration */
+}
+
+/* --- SEPARATOR & COPYRIGHT --- */
+.footer-separator {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 10px auto 20px;
+    width: 100%;
+}
+
+.copyright-section {
+    text-align: left;
+    color: #999;
+    font-size: 0.8em;
+}
+
+/* --- MENU TOGGLE BUTTON (Hidden on Desktop) --- */
+.menu-toggle {
+    display: none;
+    /* Hide button by default on large screens */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 0 10px;
+    z-index: 10;
+    /* Ensure it is above other elements */
+}
+
+/* --- MOBILE NAVIGATION STYLING --- */
+@media (max-width: 768px) {
+
+    /* Header container Layout */
+    .header-content {
+        flex-direction: row;
+        /* Keep logo and menu button in a row */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* 1. Show the Menu Toggle Button */
+    .menu-toggle {
+        display: block;
+        /* Show button on small screens */
+        order: 2;
+        /* Move it to a suitable position */
+    }
+
+    .main-nav ul {
+        position: absolute;
+        right: 50px;
+        top: 15px;
+    }
+
+    /* 2. Collapse the Navigation Links */
+    .main-nav ul {
+        /* Default state: hidden and off-screen */
+        display: block;
+        /* Change from flex to block for vertical stacking */
+        position: absolute;
+        top: 100%;
+        /* Position below the header */
+        left: 0;
+        width: 100%;
+        background-color: #4D148C;
+        /* A dark color for the dropdown background (FedEx Purple) */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+        /* Start off-screen (adjust depending on header width) */
+        transform: translateY(-200%);
+        transition: transform 0.3s ease-in-out;
+
+        /* Ensure it covers everything */
+        z-index: 5;
+        padding-bottom: 20px;
+    }
+
+    /* 3. Dropdown Menu Links */
+    .main-nav ul li {
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .main-nav ul li a {
+        display: block;
+        padding: 15px 0;
+        color: white;
+        text-decoration: none;
+        font-size: 1.1em;
+    }
+
+    /* 4. Toggled State: Bring the menu into view */
+    .main-nav ul.open {
+        transform: translateY(0);
+    }
+
+    /* Re-organize header content for mobile if necessary (from previous steps) */
+    .header-content {
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-column-group {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-column {
+        min-width: unset;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-column ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-column ul li {
+        margin: 5px 15px;
+    }
+
+    .language-selector {
+        min-width: 100%;
+        text-align: center;
+    }
+
+    .language-display {
+        justify-content: center;
+    }
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .feature-block {
+        flex-direction: column;
+        /* Stack image and text vertically */
+        text-align: center;
+    }
+
+    .block-image-column {
+        width: 100%;
+        /* Image takes full width */
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .feature-separator {
+        width: 90%;
+    }
+}
+
+/* --- RESPONSIVENESS FOR THE NEW SECTION --- */
+@media (max-width: 900px) {
+    .support-content {
+        grid-template-columns: 1fr;
+        /* Stack columns vertically */
+        gap: 30px;
+    }
+
+    .support-text-column h2 {
+        font-size: 2em;
+    }
+
+    .support-image-column {
+        /* On smaller screens, the image can stay at the bottom, or you can move it to the top */
+        order: -1;
+        /* Example: Move image to the top on smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
+/* --- RESPONSIVENESS FOR THE NEW SECTION --- */
+@media (max-width: 900px) {
+    .feature-card-grid {
+        flex-direction: column;
+        /* Stack the cards vertically on tablets/mobiles */
+    }
+
+    .feature-card {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+}
+
+/* --- RESPONSIVENESS FOR THE NEW SECTION --- */
+@media (max-width: 900px) {
+
+    /* Stack the two main columns vertically on smaller screens */
+    .info-content {
+        grid-template-columns: 1fr;
+    }
+
+    .info-text-column {
+        padding-right: 0;
+    }
+
+    /* Stack the feature boxes vertically on very small screens */
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-image-column {
+        order: -1;
+        /* Move image to the top on mobile for better visibility */
+        margin-bottom: 30px;
+    }
+}
+
+/* Responsive adjustments (basic example) */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .main-nav ul li {
+        margin: 5px 15px;
+    }
+
+    .user-actions {
+        margin-top: 10px;
+    }
+
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .interactive-boxes {
+        flex-direction: column;
+    }
+
+    .interactive-boxes .box {
+        margin: 10px 0;
+        min-width: unset;
+        width: 80%;
+    }
+
+    .tracking-input-area {
+        flex-direction: column;
+    }
+
+    .tracking-input,
+    .track-button {
+        border-radius: 5px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- SHIPMENT OPTIONS SECTION --- */
+
+.shipment-options-section {
+    padding: 60px 0 100px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.section-subheading {
+    font-size: 1.4em;
+    color: #555;
+    margin-bottom: 50px;
+    font-weight: 300;
+}
+
+/* --- Options Grid Layout --- */
+.options-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.option-card {
+    flex: 1;
+    padding: 40px 30px;
+    border-radius: 6px;
+    text-align: left;
+    min-height: 450px;
+    /* Ensure cards are visually balanced */
+}
+
+/* Styling for the Account Holder Card (Left) */
+.account-holder {
+    background-color: #f7f7f7;
+    /* Light gray background */
+}
+
+/* Styling for the Guest Shipper Card (Right) */
+.guest-shipper {
+    background-color: #fff;
+    /* White background */
+    border: 1px solid #e0e0e0;
+}
+
+.option-card h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* --- Button Styling --- */
+
+/* Base button styles */
+.btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 15px 25px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Primary Button (LOG IN TO SHIP) */
+.btn-primary {
+    background-color: #FF6200;
+    /* FedEx Orange */
+    color: white;
+    border: 2px solid #FF6200;
+}
+
+.btn-primary:hover {
+    background-color: #e05700;
+    border-color: #e05700;
+}
+
+/* Secondary Button (SHIP AS A GUEST) */
+.btn-secondary {
+    background-color: white;
+    color: #FF6200;
+    /* FedEx Orange text */
+    border: 2px solid #FF6200;
+    /* Orange outline */
+}
+
+.btn-secondary:hover {
+    background-color: #fff6f0;
+    /* Slight orange tint on hover */
+}
+
+/* --- Feature List Styling --- */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-list li {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.checkmark {
+    color: #FF6200;
+    /* Orange checkmark */
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* --- Payment Icons --- */
+.payment-icons {
+    margin-top: 30px;
+}
+
+.payment-icons img {
+    height: 25px;
+    /* Adjust size of the payment icons */
+    margin-right: 10px;
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .options-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .option-card {
+        text-align: center;
+        padding: 30px 20px;
+        min-height: auto;
+    }
+
+    .feature-list li {
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- TRACKING SECTION STYLING --- */
+
+.tracking-section {
+    padding: 80px 0;
+    background-color: #f7f7f7;
+    /* Use the light gray background seen in other sections */
+    text-align: center;
+}
+
+.tracking-section .section-heading {
+    /* Reusing section-heading style for large, bold title */
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.tracking-section .section-subheading {
+    /* Reusing section-subheading style for the introductory text */
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+/* --- Tracking Form Styling --- */
+.tracking-form {
+    display: flex;
+    justify-content: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    /* Center the form and add space below */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for visual depth */
+    border-radius: 4px;
+    overflow: hidden;
+    /* Important to contain the input and button */
+}
+
+.tracking-form input[type="text"] {
+    flex-grow: 1;
+    padding: 15px 20px;
+    font-size: 1.1em;
+    border: 1px solid #ccc;
+    border-right: none;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.tracking-form input[type="text"]:focus {
+    border-color: #4D148C;
+    /* Focus color (FedEx Purple) */
+}
+
+.tracking-form .btn-primary {
+    /* Reuses the existing .btn-primary style (Orange background, white text) */
+    padding: 15px 35px;
+    /* Adjust padding to match input height */
+    font-size: 1.1em;
+    border-radius: 0;
+    /* Remove border-radius on the side next to the input */
+    line-height: normal;
+    /* Ensures button text aligns with input */
+    flex-shrink: 0;
+    /* Prevents button from shrinking */
+}
+
+/* --- Tracking Info Display --- */
+.tracking-info {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    /* White background for the results box */
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.tracking-info h3 {
+    font-size: 1.6em;
+    color: #4D148C;
+    /* FedEx Purple for the header */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.tracking-info p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Tracking History List */
+.tracking-history {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    border-top: 1px dashed #ddd;
+    padding-top: 15px;
+}
+
+.tracking-history li {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 8px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.tracking-history li::before {
+    content: '•';
+    /* Simple bullet point */
+    color: #FF6200;
+    /* Orange bullet */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 600px) {
+    .tracking-form {
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    .tracking-form input[type="text"] {
+        border-right: 1px solid #ccc;
+        /* Restore border on small screens */
+        border-bottom: none;
+        border-radius: 4px 4px 0 0;
+    }
+
+    .tracking-form .btn-primary {
+        border-radius: 0 0 4px 4px;
+        /* Apply radius only to bottom corners */
+    }
+
+    .tracking-info {
+        max-width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- DROPOFF LOCATIONS SECTION STYLING --- */
+
+.dropoff-locations-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+    /* White background */
+    text-align: center;
+}
+
+.dropoff-question-heading {
+    font-size: 2.5em;
+    font-weight: 300;
+    /* Lighter weight for a friendlier feel, as seen in the image */
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.dropoff-description {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* --- Secondary Button Styling (Blue Border) --- */
+
+/* Adapt existing .btn class for the custom blue look */
+.dropoff-btn-secondary {
+    /* Uses the generic .btn class properties for structure */
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    /* Specific styling for the blue border and text */
+    background-color: transparent;
+    /* White background */
+    color: #0076c7;
+    /* A deep blue color for text */
+    border: 2px solid #0076c7;
+    /* Blue border */
+
+    padding: 15px 30px;
+    border-radius: 30px;
+    /* Highly rounded corners */
+
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.dropoff-btn-secondary:hover {
+    background-color: #e6f3ff;
+    /* Very light blue background on hover */
+    color: #005a96;
+    /* Darker blue text on hover */
+    border-color: #005a96;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+    .dropoff-question-heading {
+        font-size: 2em;
+    }
+
+    .dropoff-btn-secondary {
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+}
+
+/* --- PARTNER LOGOS SECTION STYLING --- */
+
+.partner-logos-section {
+    padding: 60px 0;
+    background-color: #fcfcfc;
+    /* Slightly off-white background */
+    text-align: center;
+}
+
+.logo-grid {
+    display: grid;
+    /* Create a responsive grid: 3 columns on large screens, adjusting down */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    /* Space between logo items */
+    justify-items: center;
+    /* Center logos horizontally within their grid cells */
+    align-items: center;
+    /* Center logos vertically within their grid cells */
+    max-width: 1000px;
+    /* Max width for the grid */
+    margin: 0 auto;
+    /* Center the grid itself */
+}
+
+.partner-logo-item {
+    padding: 15px;
+    /* Padding around each logo */
+    display: flex;
+    /* Use flex to center image if it's smaller than item */
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    /* White background for each logo box */
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow */
+    min-height: 100px;
+    /* Ensure a consistent minimum height for all logo boxes */
+}
+
+.partner-logo-item img {
+    max-width: 100%;
+    /* Ensure images don't overflow their container */
+    max-height: 70px;
+    /* Control the height of the logos */
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    /* Ensures the entire logo is visible */
+    filter: grayscale(80%);
+    /* Optional: Make logos grayscale to unify style */
+    opacity: 0.7;
+    /* Optional: Make them slightly less prominent */
+    transition: all 0.3s ease;
+}
+
+.partner-logo-item img:hover {
+    filter: grayscale(0%);
+    /* Optional: Full color on hover */
+    opacity: 1;
+    /* Optional: Full opacity on hover */
+    transform: scale(1.05);
+    /* Optional: Slightly enlarge on hover */
+}
+
+/* Optional: If you use .logo-caption */
+.logo-caption {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+    .logo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        /* 2 columns on tablets */
+        gap: 20px;
+    }
+
+    .partner-logo-item {
+        min-height: 80px;
+    }
+
+    .partner-logo-item img {
+        max-height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-grid {
+        grid-template-columns: 1fr 1fr;
+        /* 2 columns on mobile */
+    }
+}
+
+
+
+
+/* --- PROCESS STEPS SECTION STYLING --- */
+
+.process-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+    /* White background */
+    text-align: center;
+}
+
+.process-heading {
+    font-size: 2.5em;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 60px;
+}
+
+.steps-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.process-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Circular Image Container */
+.step-image-circle {
+    width: 250px;
+    /* Define the size of the circle */
+    height: 250px;
+    border-radius: 50%;
+    /* Makes the container a perfect circle */
+    overflow: hidden;
+    /* Crucial: Clips the image into the circle shape */
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Subtle lift */
+}
+
+.step-image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures image covers the circle without distortion */
+    display: block;
+}
+
+.step-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4D148C;
+    /* FedEx Purple (or your primary color) */
+    background-color: #f7f7f7;
+    /* Light background for the text box */
+    padding: 10px 20px;
+    margin-top: -15px;
+    /* Adjust slightly up to overlap the circle visually */
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+    .steps-grid {
+        flex-direction: column;
+        /* Stack steps vertically on smaller screens */
+        gap: 50px;
+    }
+
+    .process-heading {
+        font-size: 2em;
+    }
+
+    .step-image-circle {
+        width: 200px;
+        /* Smaller circles on mobile */
+        height: 200px;
+    }
+}
+
+
+
+
+
+/* --- ACCOUNT TOOLS SECTION STYLING --- */
+
+.account-tools-section {
+    padding: 80px 0 100px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.section-heading-lg {
+    font-size: 3em;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.account-intro-text {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.account-intro-text a {
+    color: #4D148C;
+    /* Purple link color */
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+.account-intro-text a:hover {
+    color: #FF6200;
+    /* Orange hover color */
+}
+
+/* --- Tools Grid Layout --- */
+.tools-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    /* Allows wrapping on smaller screens */
+}
+
+.tool-item {
+    flex: 0 0 18%;
+    /* Set initial width to accommodate 5 items */
+    max-width: 220px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tool-icon-wrapper {
+    /* Container for the icon */
+    width: 100%;
+    height: 100px;
+    /* Space for the icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tool-icon-wrapper img {
+    /* Assuming your icon image is a gradient SVG/PNG */
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.tool-item:hover .tool-icon-wrapper img {
+    transform: translateY(-5px);
+    /* Subtle lift on hover */
+}
+
+.tool-title {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #4D148C;
+    /* Purple title */
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+
+
+/* --- Responsiveness --- */
+@media (max-width: 1200px) {
+    .tools-grid {
+        gap: 20px;
+    }
+
+    .tool-item {
+        flex: 0 0 30%;
+        /* Show 3 items per row */
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-heading-lg {
+        font-size: 2.5em;
+    }
+
+    .tool-item {
+        flex: 0 0 45%;
+        /* Show 2 items per row */
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .section-heading-lg {
+        font-size: 2em;
+    }
+
+    .tool-item {
+        flex: 0 0 90%;
+        /* Show 1 item per row */
+        max-width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* --- SPECIALIZED SERVICES SECTION STYLING --- */
+
+.specialized-services-section {
+    padding: 80px 0;
+    background-color: #fff;
+    /* White background */
+    text-align: center;
+}
+
+.specialized-services-section .section-heading-lg {
+    /* Reuse style from previous section, adjusting margin */
+    margin-bottom: 25px;
+}
+
+.service-intro-text {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* --- ACCORDION STYLING --- */
+.accordion-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.accordion-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+/* Accordion Header (The clickable button) */
+.accordion-header {
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    padding: 20px 25px;
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.accordion-header:hover {
+    background-color: #f5f5f5;
+}
+
+/* Accordion Icon (The caret/arrow) */
+.accordion-icon {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #4D148C;
+    /* Purple arrow pointing down */
+    transition: transform 0.3s ease;
+    margin-left: 15px;
+}
+
+/* Icon transformation when panel is open */
+.accordion-header[aria-expanded="true"] .accordion-icon {
+    transform: rotate(180deg);
+}
+
+/* Accordion Content (The hidden panel) */
+.accordion-content {
+    background-color: #fcfcfc;
+    padding: 0 25px;
+    max-height: 0;
+    /* Key for the collapse animation */
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+/* Make content visible when open */
+.accordion-content.open {
+    max-height: 500px;
+    /* Needs to be larger than content height */
+    padding: 20px 25px;
+}
+
+.accordion-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.accordion-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+.accordion-content ul li {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.accordion-content ul li::before {
+    content: '•';
+    /* Bullet point */
+    color: #FF6200;
+    /* Orange bullet point */
+    font-weight: bold;
+    display: inline-block;
+    width: 1.5em;
+}
+
+.accordion-content a {
+    color: #4D148C;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+/* --- DROPOFF SECTION STYLING (Split Background) --- */
+
+.dropoff-section {
+    padding-top: 0;
+    /* Adjust as needed, content wrapper handles spacing */
+    padding-bottom: 0;
+    background-color: #fff;
+    /* Default background */
+}
+
+.dropoff-content-wrapper {
+    display: flex;
+    min-height: 450px;
+    /* Adjust height as needed */
+    position: relative;
+    overflow: hidden;
+    color: white;
+    /* Default text color for this section */
+}
+
+/* Text Column (Left) with Gradient */
+.dropoff-text-column {
+    flex: 0 0 55%;
+    /* Takes 55% width */
+    /* Gradient from purple to orange */
+    background: linear-gradient(to right, #4D148C 0%, #FF6200 100%);
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* Align text to the left */
+    position: relative;
+    z-index: 2;
+    /* Ensure text is above any potential background effects */
+}
+
+.dropoff-text-column h2 {
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.dropoff-text-column p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.dropoff-text-column .btn-primary {
+    /* Reusing primary button style, but adjusting for this context */
+    background-color: white;
+    /* White button on gradient */
+    color: #FF6200;
+    /* Orange text */
+    border: 2px solid white;
+    width: auto;
+    /* Let button size be determined by content */
+    padding: 15px 30px;
+    margin-bottom: 20px;
+}
+
+.dropoff-text-column .btn-primary:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Slight transparency on hover */
+    color: #e05700;
+}
+
+.create-label-link {
+    color: white;
+    text-decoration: underline;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.create-label-link:hover {
+    color: #f0f0f0;
+    /* Lighter white on hover */
+}
+
+/* Image Column (Right) */
+.dropoff-image-column {
+    flex: 1;
+    /* Takes remaining width */
+    position: relative;
+    z-index: 1;
+    /* Keep image behind text column if they overlap */
+}
+
+.dropoff-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- BOTTOM MESSAGE BAR --- */
+.bottom-message-bar {
+    background-color: #fff;
+    /* White background */
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow at the top */
+}
+
+.message-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    /* Space between text and icon */
+}
+
+.bottom-message-bar h3 {
+    font-size: 1.8em;
+    font-weight: 300;
+    color: #333;
+    margin: 0;
+}
+
+.chat-bubble-icon {
+    background-color: #4D148C;
+    /* FedEx Purple */
+    color: white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 992px) {
+    .dropoff-content-wrapper {
+        flex-direction: column;
+        /* Stack columns vertically */
+        min-height: auto;
+    }
+
+    .dropoff-text-column {
+        flex: auto;
+        /* Allow text column to take full width */
+        padding: 40px 30px;
+        text-align: center;
+        align-items: center;
+        /* Center items for mobile */
+    }
+
+    .dropoff-text-column h2 {
+        font-size: 2.5em;
+    }
+
+    .dropoff-text-column p {
+        font-size: 1.1em;
+    }
+
+    .dropoff-image-column {
+        flex: auto;
+        /* Allow image column to take full width */
+        min-height: 250px;
+        /* Give image a minimum height on mobile */
+    }
+
+    .bottom-message-bar h3 {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropoff-text-column h2 {
+        font-size: 2em;
+    }
+
+    .dropoff-text-column p {
+        font-size: 1em;
+    }
+
+    .bottom-message-bar h3 {
+        font-size: 1.2em;
+        padding: 0 10px;
+    }
+
+    .message-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- FAQ SECTION STYLING --- */
+
+.faq-section {
+    padding: 80px 0;
+    background-color: #fcfcfc;
+    /* Light background */
+    text-align: center;
+}
+
+.faq-heading {
+    /* Large, center-aligned heading */
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.faq-list {
+    list-style: none;
+    /* Remove default ordered list numbers */
+    padding: 0;
+    margin: 0 auto;
+    max-width: 900px;
+    text-align: left;
+}
+
+.faq-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    /* Separator line between questions */
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+    /* Remove line from the last item */
+}
+
+.faq-question {
+    font-size: 1.3em;
+    font-weight: 600;
+    /* Bold question */
+    color: #4D148C;
+    /* Use the primary purple color for questions */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.faq-answer {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+    padding-left: 20px;
+    /* Indent answer slightly */
+}
+
+.faq-answer p {
+    margin-bottom: 10px;
+}
+
+/* Styling for nested lists (for Excel functions) */
+.faq-answer ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 10px 0 10px 0;
+}
+
+.faq-answer ul li {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.faq-answer ul li::before {
+    content: '•';
+    /* Bullet point */
+    color: #FF6200;
+    /* Orange bullet */
+    font-weight: bold;
+    display: inline-block;
+    width: 1.5em;
+}
+
+.bullet-key {
+    font-weight: bold;
+    /* Highlight key Excel functions */
+    color: #333;
+}
+
+/* Link styling within answers */
+.faq-answer a {
+    color: #FF6200;
+    /* Orange link color */
+    text-decoration: underline;
+}
+
+.faq-answer a:hover {
+    color: #4D148C;
+    /* Purple on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- FLAT-RATE PROMO SECTION STYLING --- */
+
+.flat-rate-promo-section {
+    background-color: #fff;
+    /* White background for the entire section */
+    padding: 0;
+    /* Content wrapper handles padding */
+    position: relative;
+    overflow: hidden;
+    /* Important for containing angled dividers if used */
+}
+
+.flat-rate-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Vertically center content */
+    max-width: 1400px;
+    /* Max width for the content itself */
+    margin: 0 auto;
+    min-height: 500px;
+    /* Minimum height for the banner */
+    position: relative;
+}
+
+/* Left Text Column */
+.flat-rate-text-column {
+    flex: 1;
+    /* Takes up available space */
+    padding: 60px 40px 60px 80px;
+    /* Adjust padding as needed */
+    text-align: left;
+    color: #333;
+    z-index: 2;
+    /* Ensure text is above any background effects */
+}
+
+.flat-rate-text-column h2 {
+    font-size: 3em;
+    font-weight: 300;
+    /* Lighter font weight as in the image */
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.flat-rate-text-column p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.flat-rate-text-column .btn-primary {
+    /* Reuses existing .btn-primary style */
+    display: inline-block;
+    /* Make it an inline block to size to content */
+    padding: 15px 40px;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.sub-links {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.sub-links a {
+    color: #666;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.sub-links a:hover {
+    color: #4D148C;
+    /* Purple on hover */
+}
+
+.link-separator {
+    margin: 0 8px;
+    color: #ccc;
+}
+
+
+/* Right Image Column */
+.flat-rate-image-column {
+    flex: 1;
+    /* Takes up available space */
+    background-color: #f8f8f8;
+    /* Light gray background to blend with image if needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.flat-rate-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .flat-rate-content-wrapper {
+        flex-direction: column;
+        /* Stack columns vertically */
+        min-height: auto;
+    }
+
+    .flat-rate-text-column {
+        padding: 50px 40px;
+        text-align: center;
+        /* Center text on mobile */
+    }
+
+    .flat-rate-text-column h2 {
+        font-size: 2.5em;
+    }
+
+    .flat-rate-image-column {
+        min-height: 300px;
+        /* Give image column a defined height on mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    .flat-rate-text-column h2 {
+        font-size: 2em;
+    }
+
+    .flat-rate-text-column p {
+        font-size: 1em;
+    }
+
+    .flat-rate-text-column .btn-primary {
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* blog section styling */
+
+/* --- DARK HERO BANNER SECTION STYLING --- */
+
+.hero-banner-dark {
+    /* Deep blue/dark background color */
+    background-color: #001f40;
+    /* Placeholder for a background image (optional) */
+    /* background-image: url('dark-banner-background.jpg'); */
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    /* Generous padding for height */
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 3.5em;
+    font-weight: 300;
+    /* Lighter font weight for a clean look */
+    line-height: 1.1;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.25em;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: #eef;
+    /* Slightly off-white for subtitle */
+}
+
+/* --- Hero Button Styling --- */
+.btn-hero {
+    display: inline-block;
+    background-color: #FF6200;
+    /* Orange accent color */
+    color: white;
+    padding: 15px 45px;
+    border: 2px solid #FF6200;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: #e65c00;
+    /* Darker orange on hover */
+    border-color: #e65c00;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.hero {
+    background-color: #4d148c;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.services {
+    padding: 2rem;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #4d148c;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    color: #4d148c;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #ff6600;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* Hero 2 Section Styles */
+.hero-2 {
+    background: linear-gradient(135deg, #f8f8f8, #ffffff);
+    color: rgb(0, 0, 0);
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-2 h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-2 p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Services 2 Section Styles */
+.services-2 {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.services-2 .card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-2 .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.services-2 .card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.services-2 .card-content {
+    padding: 24px;
+}
+
+.services-2 .card-content h2 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.services-2 .card-content p {
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.services-2 .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #FF6200;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.services-2 .btn:hover {
+    background-color: #e65800;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-2 {
+        padding: 40px 20px;
+    }
+
+    .hero-2 h1 {
+        font-size: 2rem;
+    }
+
+    .hero-2 p {
+        font-size: 1.1rem;
+    }
+
+    .services-2 {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    .card {
+        flex-direction: row;
+    }
+
+    .card img {
+        width: 50%;
+    }
+
+    .card-content {
+        width: 50%;
+    }
+}
+
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .hero-banner-dark {
+        padding: 80px 20px;
+    }
+
+    .hero-title {
+        font-size: 2.5em;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1em;
+    }
+
+    .btn-hero {
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+}

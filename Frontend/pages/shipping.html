@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel-logistics Homepage</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo-box">
+                <a href="index.html">
+                    <img src="../assets/images/logo.png" alt="Excel-logistics">
+                </a>
+                <!-- <div class="logo-text">E-Secure</div> -->
+            </div>
+
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav-list">
+                &#9776; </button>
+
+            <nav class="main-nav">
+                <ul id="main-nav-list">
+                    <li><a href="shipping.html">Shipping</a></li>
+                    <li><a href="tracking.html">Tracking</a></li>
+                    <!-- <li><a href="design.html">Design & Print</a></li> -->
+                    <li><a href="location.html">Locations</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="shipment-options-section">
+        <div class="container">
+
+            <h2 class="section-heading">Create a shipment</h2>
+            <p class="section-subheading">How would you like to ship?</p>
+
+            <div class="options-grid">
+
+                <div class="option-card account-holder">
+                    <h3>I already have an account</h3>
+
+                    <a href="#" class="btn btn-primary">LOG IN TO SHIP</a>
+
+                    <ul class="feature-list">
+                        <li><span class="checkmark">✓</span> Get discounted shipping rates</li>
+                        <li><span class="checkmark">✓</span> Connect your e-commerce store</li>
+                        <li><span class="checkmark">✓</span> Request pickups</li>
+                        <li><span class="checkmark">✓</span> Track in detail</li>
+                    </ul>
+                </div>
+
+                <div class="option-card guest-shipper">
+                    <h3>I want to ship without an account</h3>
+
+                    <a href="#" class="btn btn-secondary">SHIP AS A GUEST</a>
+
+                    <ul class="feature-list">
+                        <li><span class="checkmark">✓</span> No need to sign up</li>
+                        <li><span class="checkmark">✓</span> Ship right away</li>
+                        <li><span class="checkmark">✓</span> Pay by card</li>
+                    </ul>
+
+                    <div class="payment-icons">
+                        <img src="../assets/images/visa-icon.png" alt="Visa">
+                        <img src="../assets/images/mastercard-icon.png" alt="Mastercard">
+                        <img src="../assets/images/paypal-icon.png" alt="Paypal">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+
+            <div class="footer-column-group">
+
+                <div class="footer-column our-company">
+                    <h4 class="column-title">OUR COMPANY</h4>
+                    <ul>
+                        <li><a href="about.html">About Excel logistics</a></li>
+                        <li><a href="portfolio.html">Our Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column our-company">
+                    <ul>
+                        <li><a href="blog.html">Excel logistics Blog</a></li>
+                        <li><a href="corporate.html">Corporate Responsibility</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- <div class="footer-column more-from-excel-secure">
+                    <h4 class="column-title">MORE FROM EXCEL LOGISTICS</h4>
+                    <ul>
+                        <li><a href="#">Excel logistics Compatible</a></li>
+                        <li><a href="#">Excel logistics Developer Portal</a></li>
+                        <li><a href="#">Excel logistics Logistics</a></li>
+                        <li><a href="#">ShopRunner</a></li>
+                    </ul>
+                </div> -->
+
+            </div>
+
+            <div class="chat-widget-container">
+                <button class="chat-toggle-button" id="chatToggleButton" aria-expanded="false"
+                    aria-controls="chat-window">
+                    💬
+                </button>
+
+                <div class="chat-window" id="chat-window" aria-hidden="true">
+                    <div class="chat-header">
+                        <h4>Live Support</h4>
+                        <span class="chat-close-icon" onclick="closeChat()">✖</span>
+                    </div>
+                    <div class="chat-body">
+                        <p>Welcome to Excel logistics Support! How can we help you today?</p>
+                    </div>
+                    <div class="chat-footer">
+                        <input type="text" placeholder="Type your message...">
+                        <button>Send</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-column language-selector">
+                <h4 class="column-title">LANGUAGE</h4>
+
+                <div class="language-display">
+                    <span class="globe-icon">🌐</span>
+                    <span>United States</span>
+                </div>
+
+                <div class="select-wrapper">
+                    <select name="language" id="language-select" class="language-dropdown">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <hr class="footer-separator">
+
+        <div class="container copyright-section">
+            <p>&copy; 2025 Excel Secure. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+<script src="../assets/js/script.js"></script>
+
+</html>

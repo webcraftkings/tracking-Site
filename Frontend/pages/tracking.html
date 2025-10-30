@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel-logistics Homepage</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo-box">
+                <a href="index.html">
+                    <img src="../assets/images/logo.png" alt="Excel-logistics">
+                </a>
+                <!-- <div class="logo-text">E-Secure</div> -->
+            </div>
+
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav-list">
+                &#9776; </button>
+
+            <nav class="main-nav">
+                <ul id="main-nav-list">
+                    <li><a href="shipping.html">Shipping</a></li>
+                    <li><a href="tracking.html">Tracking</a></li>
+                    <!-- <li><a href="design.html">Design & Print</a></li> -->
+                    <li><a href="location.html">Locations</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="tracking-section">
+        <div class="container">
+            <h2 class="section-heading">Track Your Shipment</h2>
+            <p class="section-subheading">Enter your tracking number below to get the latest status of your shipment.</p>
+
+            <form class="tracking-form" action="#" method="GET">
+                <input type="text" name="tracking-number" placeholder="Enter Tracking Number" required>
+                <button type="submit" class="btn btn-primary">TRACK</button>
+            </form>
+
+            <div class="tracking-info">
+                <!-- This section will be dynamically populated with tracking details -->
+                <h3>Tracking Details</h3>
+                <p>Status: In Transit</p>
+                <p>Estimated Delivery: 2024-05-01</p>
+                <p>Last Location: New York, NY</p>
+                <ul class="tracking-history">
+                    <li>2024-04-28: Shipment picked up</li>
+                    <li>2024-04-29: Arrived at sorting facility</li>
+                    <li>2024-04-30: Departed from New York, NY</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+
+            <div class="footer-column-group">
+
+                <div class="footer-column our-company">
+                    <h4 class="column-title">OUR COMPANY</h4>
+                    <ul>
+                        <li><a href="about.html">About Excel logistics</a></li>
+                        <li><a href="portfolio.html">Our Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column our-company">
+                    <ul>
+                        <li><a href="blog.html">Excel logistics Blog</a></li>
+                        <li><a href="corporate.html">Corporate Responsibility</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="chat-widget-container">
+                <button class="chat-toggle-button" id="chatToggleButton" aria-expanded="false"
+                    aria-controls="chat-window">
+                    💬
+                </button>
+
+                <div class="chat-window" id="chat-window" aria-hidden="true">
+                    <div class="chat-header">
+                        <h4>Live Support</h4>
+                        <span class="chat-close-icon" onclick="closeChat()">✖</span>
+                    </div>
+                    <div class="chat-body">
+                        <p>Welcome to Excel logistics Support! How can we help you today?</p>
+                    </div>
+                    <div class="chat-footer">
+                        <input type="text" placeholder="Type your message...">
+                        <button>Send</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-column language-selector">
+                <h4 class="column-title">LANGUAGE</h4>
+
+                <div class="language-display">
+                    <span class="globe-icon">🌐</span>
+                    <span>United States</span>
+                </div>
+
+                <div class="select-wrapper">
+                    <select name="language" id="language-select" class="language-dropdown">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <hr class="footer-separator">
+
+        <div class="container copyright-section">
+            <p>&copy; 2025 Excel Secure. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+
+</body>
+
+</html>

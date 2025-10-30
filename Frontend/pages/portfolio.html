@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excel-logistics - About Us</title>
+    <!-- <link rel="stylesheet" href="styles.css"/> -->
+</head>
+
+<style>
+    .hero-section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 40px auto;
+        max-width: 1000px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .banner {
+        flex: 1 1 300px;
+        background: linear-gradient(to right, #4b0082, #ff6600);
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .banner h1 {
+        font-size: 1.8em;
+        margin: 0;
+    }
+
+    .image-area {
+        flex: 1 1 400px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .image-area img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+    }
+
+    .main-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 50px auto;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .text-content {
+        flex: 1 1 600px;
+        padding: 40px;
+    }
+
+    .text-content h1 {
+        font-size: 2em;
+        color: #4b0082;
+        margin-bottom: 20px;
+    }
+
+    .text-content p {
+        font-size: 1em;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    .cta h2 {
+        font-size: 1.4em;
+        color: #1a237e;
+        margin-bottom: 10px;
+    }
+
+    .cta p {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+    .image-content {
+        flex: 1 1 400px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .image-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    /* Navigation bar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: #FF6200;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #4d148c;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #fffbfb;
+        font-weight: 500;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 2.5rem;
+    }
+
+    .executives,
+    .stats,
+    .locations {
+        padding: 2rem;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .executive-card {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        background-color: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .executive-card img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-right: 1rem;
+        object-fit: cover;
+    }
+
+    .stats ul,
+    .locations ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .stats li,
+    .locations li {
+        background-color: white;
+        margin: 0.5rem 0;
+        padding: 0.75rem;
+        border-radius: 6px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    /* --- FOOTER STYLING --- */
+
+.main-footer {
+    background-color: #f5f5fa; /* Very light purple/off-white background */
+    padding: 30px 0 20px;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distributes columns across the footer */
+    gap: 30px;
+    padding-bottom: 20px;
+}
+
+.footer-column-group {
+    display: flex;
+    gap: 60px; /* Space between the main groups of columns */
+}
+
+.footer-column {
+    /* For column 1 and 2, which are tightly grouped */
+    min-width: 150px; 
+}
+
+.footer-column h4.column-title {
+    font-size: 0.85em;
+    font-weight: bold;
+    color: #4D148C; /* FedEx Purple */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #333; /* Dark text for links */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #4D148C; /* Purple on hover */
+}
+
+/* --- LANGUAGE SELECTOR STYLING --- */
+.language-selector {
+    min-width: 200px;
+}
+
+.language-display {
+    display: flex;
+    align-items: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.language-display .globe-icon {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    /* Creating the blue border visible in the image */
+    border: 2px solid #a3c4f7; 
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.language-dropdown {
+    width: 100%;
+    padding: 10px 30px 10px 10px; /* Extra padding on the right for the arrow */
+    appearance: none; /* Removes default browser dropdown arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1em;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Custom dropdown arrow (recreating the look without a true custom element) */
+.select-wrapper::after {
+    content: '⌵'; /* Custom down arrow character or use an SVG/image */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #4D148C; /* Purple arrow */
+    pointer-events: none; /* Allows clicks to go through to the select element */
+}
+
+/* --- LIVE CHAT WIDGET STYLING --- */
+
+/* Container for positioning (Fixed to screen bottom-right) */
+.chat-widget-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999; /* Ensure it's on top of everything */
+}
+
+/* 1. Chat Toggle Button (The Bubble Icon) */
+.chat-toggle-button {
+    background-color: #FF6200; /* FedEx Orange */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1.8em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.chat-toggle-button:hover {
+    background-color: #e05700;
+    transform: scale(1.05);
+}
+
+/* 2. Chat Window (The actual dialogue box) */
+.chat-window {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 320px;
+    height: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    
+    /* Position above the toggle button */
+    position: absolute;
+    bottom: 80px; /* Space above the toggle button */
+    right: 0;
+    
+    /* Hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.95);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 3. Toggled State: Make it visible */
+.chat-window.open {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+/* Chat Header */
+.chat-header {
+    background-color: #4D148C; /* FedEx Purple */
+    color: white;
+    padding: 15px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h4 {
+    margin: 0;
+    font-weight: 500;
+}
+
+.chat-close-icon {
+    font-size: 1em;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.chat-close-icon:hover {
+    opacity: 1;
+}
+
+/* Chat Body (Message area) */
+.chat-body {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+/* Chat Footer (Input area) */
+.chat-footer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.chat-footer input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+    outline: none;
+}
+
+.chat-footer button {
+    background-color: #FF6200;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: not-allowed; /* Disabled until actual chat integration */
+}
+
+/* --- SEPARATOR & COPYRIGHT --- */
+.footer-separator {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 10px auto 20px;
+    width: 100%;
+}
+
+.copyright-section {
+    text-align: left;
+    color: #999;
+    font-size: 0.8em;
+}
+
+/* --- MENU TOGGLE BUTTON (Hidden on Desktop) --- */
+.menu-toggle {
+    display: none; /* Hide button by default on large screens */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 0 10px;
+    z-index: 10; /* Ensure it is above other elements */
+}
+</style>
+
+<body>
+    <header class="navbar">
+        <div class="logo">Excel-logistics</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="shipping.html">Shipping</a></li>
+                <li><a href="tracking.html">Tracking</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </nav>
+        <div class="auth-links">
+            <a href="#">Sign Up</a> / <a href="#">Log In</a>
+        </div>
+    </header>
+
+    <div class="hero-section">
+        <div class="banner">
+            <h1>Company Structure and Facts</h1>
+        </div>
+        <div class="image-area">
+            <img src="../assets/images/excel-logistics-delivery.png" alt="Excel-logistics delivery person holding packages" />
+        </div>
+    </div>
+
+    <div class="main-section">
+        <div class="text-content">
+            <h1>Excel-logistics – Flexibility, Efficiency, Intelligence</h1>
+            <p>
+                Excel-logistics provides customers and businesses worldwide with a broad portfolio
+                of transportation, ecommerce, and business services. We focus on making
+                supply chains smarter for everyone by offering integrated business
+                solutions utilizing our flexible, efficient, and intelligent global
+                network, covering more than 220 countries and territories.
+            </p>
+            <div class="cta">
+                <h2>Discover the impact of our dedicated team</h2>
+                <p>
+                    Find opportunities to join a global effort. And see how each role helps
+                    to connect people, businesses, and communities.
+                </p>
+                <a href="#" class="btn">EXPLORE EXCEL-LOGISTICS CAREERS</a>
+            </div>
+        </div>
+        <div class="image-content">
+            <img src="../assets/images/employees.png" alt="Excel-logistics employees smiling in uniform" />
+        </div>
+    </div>
+
+    <h1>Excel-logistics</h1>
+    <p>The largest express transportation company in the world</p>
+
+
+    <section class="executives">
+        <h2>Key Executives</h2>
+        <div class="executive-card">
+            <img src="../assets/images/richard-smith.png" alt="Richard W. Smith" />
+            <div>
+                <h3>Richard W. Smith</h3>
+                <p>COO International & CEO Airline</p>
+            </div>
+        </div>
+        <div class="executive-card">
+            <img src="../assets/images/john-marins.png" alt="John A. Marins" />
+            <div>
+                <h3>John A. Marins</h3>
+                <p>COO U.S. & Canada</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <h2>Company Statistics (FY24)</h2>
+        <ul>
+            <li><strong>Annual Revenue:</strong> $74.7 billion</li>
+            <li><strong>Team Members Worldwide:</strong> 430,000+</li>
+            <li><strong>Daily Shipment Volume:</strong> 16M+ packages & 200 lbs of freight</li>
+            <li><strong>Countries & Territories Served:</strong> 220+</li>
+            <li><strong>Motorized Vehicles:</strong> 175,000+</li>
+            <li><strong>Aircraft:</strong> 698</li>
+            <li><strong>Airports Served:</strong> 650+</li>
+            <li><strong>Facilities:</strong> 4,400+</li>
+        </ul>
+    </section>
+
+    <section class="locations">
+        <h2>Headquarters</h2>
+        <p>Memphis, TN</p>
+        <h3>Regional Headquarters</h3>
+        <ul>
+            <li>Hoofddorp, The Netherlands</li>
+            <li>Hong Kong, China</li>
+            <li>Toronto, Ontario</li>
+            <li>Miami, Florida</li>
+        </ul>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+
+            <div class="footer-column-group">
+
+                <div class="footer-column our-company">
+                    <h4 class="column-title">OUR COMPANY</h4>
+                    <ul>
+                        <li><a href="about.html">About Excel logistics</a></li>
+                        <li><a href="portfolio.html">Our Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column our-company">
+                    <ul>
+                        <li><a href="blog.html">Excel logistics Blog</a></li>
+                        <li><a href="corporate.html">Corporate Responsibility</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- <div class="footer-column more-from-excel-secure">
+                    <h4 class="column-title">MORE FROM EXCEL LOGISTICS</h4>
+                    <ul>
+                        <li><a href="#">Excel logistics Compatible</a></li>
+                        <li><a href="#">Excel logistics Developer Portal</a></li>
+                        <li><a href="#">Excel logistics Logistics</a></li>
+                        <li><a href="#">ShopRunner</a></li>
+                    </ul>
+                </div> -->
+
+            </div>
+
+            <div class="chat-widget-container">
+                <button class="chat-toggle-button" id="chatToggleButton" aria-expanded="false"
+                    aria-controls="chat-window">
+                    💬
+                </button>
+
+                <div class="chat-window" id="chat-window" aria-hidden="true">
+                    <div class="chat-header">
+                        <h4>Live Support</h4>
+                        <span class="chat-close-icon" onclick="closeChat()">✖</span>
+                    </div>
+                    <div class="chat-body">
+                        <p>Welcome to Excel logistics Support! How can we help you today?</p>
+                    </div>
+                    <div class="chat-footer">
+                        <input type="text" placeholder="Type your message...">
+                        <button>Send</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-column language-selector">
+                <h4 class="column-title">LANGUAGE</h4>
+
+                <div class="language-display">
+                    <span class="globe-icon">🌐</span>
+                    <span>United States</span>
+                </div>
+
+                <div class="select-wrapper">
+                    <select name="language" id="language-select" class="language-dropdown">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <hr class="footer-separator">
+
+        <div class="container copyright-section">
+            <p>&copy; 2025 Excel Secure. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
